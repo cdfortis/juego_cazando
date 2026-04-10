@@ -17,9 +17,9 @@ const ALTURAGATO = 50;
 
 // COMIDA
 
-let comidaX = 50;
+let comidaX = 0;
 
-let comidaY = 50;
+let comidaY = 0;
 
 const ANCHOCOMIDA = 30;
 
