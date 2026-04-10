@@ -1,4 +1,4 @@
-let canvas = document.getElementById("juego");
+let canvas = document.getElementById("areajuego");
 
 let ctx = canvas.getContext("2d");
 
@@ -58,6 +58,18 @@ function iniciarJuego() {
     gatoX = (canvas.width / 2) - (ANCHOGATO / 2);
 
     gatoY = (canvas.height / 2) - (ALTURAGATO / 2);
+
+
+
+ //COMIDA ESQUINA INFERIOR DERECHA
+
+    comidaX = canvas.width - ANCHOCOMIDA;
+
+    comidaY = canvas.height - ALTURACOMIDA;
+
+ 
+
+    //ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     graficarGato();
 
