@@ -79,29 +79,16 @@ function iniciarJuego() {
 
  
 
-function mover(direccion) {
-
-    if (direccion === "arriba") gatoY -= VELOCIDAD;
-
-    if (direccion === "abajo") gatoY += VELOCIDAD;
-
-    if (direccion === "izquierda") gatoX -= VELOCIDAD;
-
-    if (direccion === "derecha") gatoX += VELOCIDAD;
-
-    graficarGato();
-
-}
 
  
 
-document.getElementById("btnArriba").onclick = () => mover("arriba");
+document.getElementById("btnArriba").onclick = () => moverArriba();
 
-document.getElementById("btnAbajo").onclick = () => mover("abajo");
+document.getElementById("btnAbajo").onclick = () => moverAbajo();
 
 document.getElementById("btnIzquierda").onclick = () => moverIzquierda();
 
-document.getElementById("btnDerecha").onclick = () => mover("derecha");
+document.getElementById("btnDerecha").onclick = () => moverDerecha();
 
 
 function limpiarCanvas(){
@@ -110,10 +97,58 @@ function limpiarCanvas(){
 }
 
 function moverIzquierda(){
-    gatoX -= 10;
-    limpiarCanvas();
-    graficarGato();
-    graficarComida();
+
+    gatoX -= 10;
+
+    limpiarCanvas();
+
+    graficarGato();
+
+    graficarComida();
+
 }
 
+ 
+
+function moverDerecha(){
+
+    gatoX += 10;
+
+    limpiarCanvas();
+
+    graficarGato();
+
+    graficarComida();
+
+}
+
+ 
+
+function moverArriba(){
+
+    gatoY -= 10;
+
+    limpiarCanvas();
+
+    graficarGato();
+
+    graficarComida();
+
+}
+
+ 
+
+function moverAbajo(){
+
+    gatoY += 10;
+
+    limpiarCanvas();
+
+    graficarGato();
+
+    graficarComida();
+
+}
+
+ 
 
