@@ -105,7 +105,8 @@ document.getElementById("btnDerecha").onclick = () => mover("derecha");
 
 
 function limpiarCanvas(){
-    
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
 }
 
 function moverIzquierda(){
