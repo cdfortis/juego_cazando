@@ -99,6 +99,20 @@ document.getElementById("btnArriba").onclick = () => mover("arriba");
 
 document.getElementById("btnAbajo").onclick = () => mover("abajo");
 
-document.getElementById("btnIzquierda").onclick = () => mover("izquierda");
+document.getElementById("btnIzquierda").onclick = () => moverIzquierda();
 
 document.getElementById("btnDerecha").onclick = () => mover("derecha");
+
+
+function limpiarCanvas(){
+    
+}
+
+function moverIzquierda(){
+    gatoX -= 10;
+    limpiarCanvas();
+    graficarGato();
+    graficarComida();
+}
+
+
