@@ -120,6 +120,8 @@ function moverIzquierda(){
 
         graficarComida();
 
+detectarColision();
+
     }
 
 }
@@ -137,6 +139,8 @@ function moverDerecha(){
         graficarGato();
 
         graficarComida();
+
+detectarColision();
 
     }
 
@@ -156,6 +160,8 @@ function moverArriba(){
 
         graficarComida();
 
+detectarColision();
+
     }
 
 }
@@ -174,6 +180,8 @@ function moverAbajo(){
 
         graficarComida();
 
+detectarColision();
+
     }
 
 }
@@ -189,3 +197,16 @@ document.getElementById("btnIzquierda").onclick = () => moverIzquierda();
 document.getElementById("btnDerecha").onclick = () => moverDerecha();
 
  
+
+// FUNCION DETECTAR COLISSION
+
+function detectarColision() {
+    if (gatox < comidax + ANCHOCOMIDA &&
+        gatox + ANCHOGATO > comidax &&
+        gatoy < comiday + ALTURACOMIDA &&
+        gatoy + ALTURAGATO > comiday) {
+        
+        alert("Miau te atrape!!"); 
+         
+    }
+}
