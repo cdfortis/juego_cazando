@@ -2,6 +2,7 @@ let canvas = document.getElementById("areaJuego");
 
 let ctx = canvas.getContext("2d");
 
+
  
 
 // GATO
@@ -27,6 +28,12 @@ let comiday=50;
 const ANCHOCOMIDA=30;
 
 const ALTURACOMIDA=30;
+
+
+
+// PUNTAJE
+
+let puntaje=0;
 
  
 
@@ -205,8 +212,14 @@ function detectarColision() {
         gatox + ANCHOGATO > comidax &&
         gatoy < comiday + ALTURACOMIDA &&
         gatoy + ALTURAGATO > comiday) {
-        
-        alert("Miau te atrape!!"); 
+            
+            comidax = generarAleatorio(0,canvas.width - ANCHOCOMIDA);
+            comiday = generarAleatorio(0,canvas.height - ALTURACOMIDA);
+
+            alert("Miau te atrape")
+            puntaje++;
+            mostrarEnSpan("puntos" , puntaje);
+            
          
     }
 }
