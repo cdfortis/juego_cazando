@@ -35,6 +35,9 @@ const ALTURACOMIDA=30;
 
 let puntaje=0;
 
+// TIEMPO VARIABLE
+let tiempo=10;
+
  
 
 //ctx.fillStyle = "#be2222";
@@ -76,6 +79,8 @@ function graficarComida(){
 // FUNCION INICIAR JUEGO
 
 function iniciarJuego(){
+
+    setInterval(restarTiempo,1000);
 
     // gato al centro del rectangulo
 
@@ -222,4 +227,12 @@ function detectarColision() {
             
          
     }
+}
+
+// FUNCION RESTAR TIEMPO
+
+function restarTiempo(){
+    tiempo=tiempo-1
+    mostrarEnSpan("tiempo",tiempo);
+    
 }
