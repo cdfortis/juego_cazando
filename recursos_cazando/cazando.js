@@ -38,6 +38,8 @@ let puntaje=0;
 // TIEMPO VARIABLE
 let tiempo=10;
 
+let intervalo;
+
  
 
 //ctx.fillStyle = "#be2222";
@@ -80,7 +82,8 @@ function graficarComida(){
 
 function iniciarJuego(){
 
-    setInterval(restarTiempo,1000);
+if (intervalo) clearInterval(intervalo);
+intervalo=setInterval(restarTiempo , 1000);
 
     // gato al centro del rectangulo
 
@@ -224,6 +227,11 @@ function detectarColision() {
             alert("Miau te atrape")
             puntaje++;
             mostrarEnSpan("puntos" , puntaje);
+
+            if (puntaje >= 6){
+                clearInterval(intervalo);
+                alert("!Ganador!!");
+            }
             
          
     }
@@ -234,5 +242,22 @@ function detectarColision() {
 function restarTiempo(){
     tiempo=tiempo-1
     mostrarEnSpan("tiempo",tiempo);
+
+    if(tiempo <= 0){
+        clearInterval(intervalo);
+        alert("Game Over");
+    }
     
+}
+
+function reiniciarJuego(){
+    puntaje=0;
+    tiempo= 10;
+
+    mostrarEnSpan("puntos" , puntaje);
+    mostrarEnSpan("tiempo", tiempo);
+
+    limpiarCanva();
+    iniciarJuego();
+
 }
