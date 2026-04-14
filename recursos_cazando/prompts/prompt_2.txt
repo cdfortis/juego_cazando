@@ -1,0 +1,5 @@
+PROMPT #2
+Necesito un fondo de patitas de gato con comida de gato
+como le puedo modificar el fondo de mi juego cazando ya que modifique solo el css
+si me parecce bien pero el juego cazando no esta en medio me podrias ayudar a ponerlo en medio
+me gustaria que me ayudes con el codigo del css ya con juego cazando en medio como te mostre antes

@@ -1,41 +1,56 @@
 /* 1. IMPORTAR FUENTE RETRO */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-/* 2. ESTILO GENERAL */
+/* 2. ESTILO GENERAL Y CENTRADO TOTAL */
 body {
-  text-align: center;
-  font-family: 'Press Start 2P', cursive;
-  background: linear-gradient(135deg, #2b5cff 0%, #1a3ab2 100%);
   margin: 0;
   padding: 20px;
+  display: flex;
+  flex-direction: column; /* Elementos uno debajo de otro */
+  align-items: center;    /* Centra horizontalmente */
+  justify-content: center; /* Centra verticalmente */
+  min-height: 100vh;      /* Ocupa toda la altura de la pantalla */
+  
+  font-family: 'Press Start 2P', cursive;
   color: #fff;
+  text-align: center;
   overflow-x: hidden;
+
+  /* Fondo de patitas */
+  background-image: url('fondogato.jpg');
+  background-size: 350px;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-color: #2b5cff;
 }
 
+/* 3. TÍTULO Y TEXTO */
 h1 {
   font-size: 22px;
-  margin-bottom: 5px;
+  margin: 0 0 10px 0;
   color: #ffffff;
   text-shadow: 3px 3px 0px #000;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px 20px;
+  border-radius: 20px;
 }
 
 p {
   font-size: 10px;
   margin-bottom: 20px;
-  opacity: 0.8;
+  text-shadow: 1px 1px 2px #000;
 }
 
-/* 3. EL CANVAS (ESTILO ARCADE) */
+/* 4. EL CANVAS (ÁREA DE JUEGO) */
 canvas {
   background: #ffffff;
   border: 8px solid #FFCC00;
-  border-radius: 25px; /* Bordes ovalados requeridos */
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  border-radius: 25px; 
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
   display: block;
-  margin: 0 auto;
 }
 
-/* 4. CONTROLES EN CRUCETA */
+/* 5. CONTROLES EN CRUCETA */
 .controles {
   display: grid;
   grid-template-areas: 
@@ -51,58 +66,60 @@ canvas {
 #btnAbajo { grid-area: abajo; }
 #btnDerecha { grid-area: derecha; }
 
-/* 5. BOTONES CON HOVER Y SOMBRA */
+/* 6. BOTONES CON ESTILO ARCADE */
 button {
   font-family: 'Press Start 2P', cursive;
   font-size: 14px;
   background-color: #FFCC00;
   color: #333;
   border: none;
-  border-radius: 15px; /* Bordes ovalados */
+  border-radius: 15px; 
   padding: 15px 20px;
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 5px 0 #b38f00; /* Sombra de profundidad */
+  box-shadow: 0 5px 0 #b38f00; 
 }
 
-/* Efecto cuando el mouse toca el botón */
 button:hover {
   background-color: #ffe066;
   box-shadow: 0 8px 15px rgba(0,0,0,0.3);
   transform: scale(1.1);
 }
 
-/* Efecto al hacer clic */
 button:active {
   transform: translateY(4px);
   box-shadow: 0 1px 0 #b38f00;
 }
 
-/* 6. PANEL DE PUNTOS (ESTILO PÍLDORA) */
+/* 7. PANEL DE PUNTOS (ESTILO PÍLDORA) */
 .panel {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.7); 
   backdrop-filter: blur(8px);
   border-radius: 50px;
   padding: 15px 30px;
   width: fit-content;
-  margin: 20px auto;
+  margin-top: 10px;
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 20px;
   font-size: 12px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  border: 2px solid #FFCC00;
 }
 
-#reiniciarBtn { /* Si le pones este id al botón de reiniciar */
-  background-color: #ffcc00;
-  margin-left: 10px;
+/* Botón de reiniciar dentro del panel */
+#reiniciarBtn, .panel button {
+  background-color: #ff4757;
+  color: white;
+  font-size: 10px;
+  padding: 10px 15px;
+  box-shadow: 0 4px 0 #a31d28;
 }
 
 /* MENSAJE DE ESTADO */
 #mensaje {
   font-size: 16px;
-  font-weight: bold;
   color: #ffeb3b;
   margin-top: 15px;
   text-transform: uppercase;
+  text-shadow: 2px 2px 0px #000;
 }
