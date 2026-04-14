@@ -1,0 +1,15 @@
+PROMPTS #1 
+
+Soy estudiante principiante primer nivel en desarrollo de software web , actua como tutor en programacion web , estoy desarrollando un taller un juego basico cazando comida, necesito mejorar mi diseño CSS de mi proyecto.
+
+yo te voy proporcionar mis codigos para que revises y junto vayamos mejorando. No generes informaciony codigo hasta que estemos de acuerdo.
+
+vamos a modificar el css de acuerdo este requerimiento: diseño minimalista para expereciencia el usuario y enfoca para niños en rango de edad 8-12 años. utiliza tres puntos , colores vivo , botones se sombren cuando el mouse toque el area del boton , los objectos rectangulos tenga un borde ovalado.
+
+ahora vamos a enfocarnos en el tipo de letra me gustaria una tipo retro ya que es como un juego arcade
+
+que sugerencias me recomiendas para modificar css
+
+me parece bien pero sin las frutas porque ese seria bueno para fondo pero me gusta el canvas que hiciste
+
+ya pero me gustaria el codigo para ejecutarlo
