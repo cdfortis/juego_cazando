@@ -6,6 +6,11 @@ let ctx = canvas.getContext("2d");
 const imagenGato = new Image();
 imagenGato.src = "gato.png"; // Asegúrate de que el nombre coincida con tu archivo
 
+
+// --- NUEVO: Cargar la imagen de la comida ---
+const imagenComida = new Image();
+imagenComida.src = "comida.png";
+
 // GATO
 
 let gatox=0;
@@ -74,13 +79,9 @@ function graficarRectangulo(x,y,ancho,alto,color){
 // FUNCION PARA GRAFICAR COMIDA
 
 function graficarComida(){
-
-    graficarRectangulo(comidax,comiday,ANCHOCOMIDA,ALTURACOMIDA,"#ff0000");
-
+    // Dibujamos la imagen de la comida en sus coordenadas
+    ctx.drawImage(imagenComida, comidax, comiday, ANCHOCOMIDA, ALTURACOMIDA);
 }
-
- 
-
 // FUNCION INICIAR JUEGO
 
 function iniciarJuego(){
