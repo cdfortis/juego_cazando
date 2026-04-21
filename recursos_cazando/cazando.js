@@ -36,7 +36,7 @@ const ALTURACOMIDA=30;
 let puntaje=0;
 
 // TIEMPO VARIABLE
-let tiempo=10;
+let tiempo=15;
 
 let intervalo;
 
