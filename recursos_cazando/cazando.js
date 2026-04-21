@@ -2,8 +2,9 @@ let canvas = document.getElementById("areaJuego");
 
 let ctx = canvas.getContext("2d");
 
-
- 
+// --- NUEVO: Cargar la imagen del gato ---
+const imagenGato = new Image();
+imagenGato.src = "gato.png"; // Asegúrate de que el nombre coincida con tu archivo
 
 // GATO
 
@@ -52,7 +53,7 @@ function graficarRectangulo(x,y,ancho,alto,color){
 
     ctx.fillStyle = color;
 
-    ctx.fillRect(x,y,ancho,alto);
+    ctx.drawImage(x,y,ancho,alto);
 
 }
 
@@ -60,9 +61,11 @@ function graficarRectangulo(x,y,ancho,alto,color){
 
 // FUNCION PARA GRAFICAR GATO
 
-function graficarGato(){    
 
-    graficarRectangulo(gatox,gatoy,ANCHOGATO,ALTURAGATO,"#000000");
+    function graficarGato() {
+    // drawImage recibe: (imagen, x, y, ancho, alto)
+    ctx.drawImage(imagenGato, gatox, gatoy, ANCHOGATO, ALTURAGATO);
+
 
 }
 
