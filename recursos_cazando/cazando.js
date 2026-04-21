@@ -252,7 +252,7 @@ function restarTiempo(){
 
 function reiniciarJuego(){
     puntaje=0;
-    tiempo= 10;
+    tiempo= 15;
 
     mostrarEnSpan("puntos" , puntaje);
     mostrarEnSpan("tiempo", tiempo);
